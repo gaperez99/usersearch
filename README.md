@@ -1,50 +1,22 @@
-# FW/1 (Framework One) [![Build Status](https://travis-ci.org/framework-one/fw1.png)](https://travis-ci.org/framework-one/fw1)
+# FuseBox configuration for a React application
 
-This FW/1 directory is a complete web application and expects to live in its own
-webroot if you plan to run the applications within it. To use FW/1 in a separate
-webroot you can either copy the `framework` directory to that webroot or add a mapping
-for `/framework` to the `framework` folder inside this FW/1 directory. Note that since
-your `Application.cfc` needs to extend `framework.one`, you have to add the mapping
-in your admin - you can't just use a per-application mapping.
+This is a very basic React application project similar to the one created by `create-react-app` using [FuseBox](https://fuse-box.org) as its building system. The project is described in the article [Introducing FuseBox, an alternative to Webpack](https://auth0.com/blog/introducing-fusebox-an-alternative-to-webpack/).
 
-Please read the [Framework One Code of Conduct](https://github.com/framework-one/fw1/blob/develop/CODE_OF_CONDUCT.md) - we want FW/1 to be a welcoming and supportive environment for everyone to feel comfortable contributing!
+Before building the application, run the following command in the root folder:
 
-# Resources
+```shell
+npm install
+```
 
-**Project home:** https://github.com/framework-one/fw1
+In order to build the development code of the application and start the integrated web server, run the following command:
 
-**Documentation / Wiki:** http://framework-one.github.io/documentation/ / http://github.com/framework-one/fw1/wiki
+```shell
+npm start
+```
 
-**Blog:** http://framework-one.github.io
+In order to build the production ready code, run the following command:
 
-**Support:** http://groups.google.com/group/framework-one/
+```shell
+npm run dist
+```
 
-**Chat:** The [CFML team Slack](http://cfml-slack.herokuapp.com) has a [dedicated #fw1 channel](https://cfml.slack.com/messages/fw1/).
-
-# Running the Tests
-
-FW/1 is setup to run tests on [Travis CI](https://travis-ci.org/framework-one/fw1) using the `.travis.yml` file.
-
-To run tests manually, you'll need [CommandBox](https://www.ortussolutions.com/products/commandbox) installed.
-
-Then run `box install` once to install the dependencies (TestBox is the only one currently).
-
-Then start a server on port 8500 with your choice of CFML engine, e.g.,
-
-    box server start cfengine=lucee@5 port=8500
-
-This will open a browser, running the FW/1 "Introduction" app.
-
-You can then run the tests:
-
-    box testbox run verbose=false
-
-If you get any failures, you can run this with more verbose, but still compact output:
-
-    box testbox run reporter=mintext
-
-# Copyright and License
-
-Copyright (c) 2009-2018, Sean Corfield (and others -- see individual files for additional copyright holders). All rights reserved.
-The use and distribution terms for this software are covered by the Apache Software License 2.0 (http://www.apache.org/licenses/LICENSE-2.0) which can also be found in the file LICENSE at the root of this distribution and in individual licensed files.
-By using this software in any fashion, you are agreeing to be bound by the terms of this license. You must not remove this notice, or any other, from this software.
