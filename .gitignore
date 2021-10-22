@@ -1,0 +1,12 @@
+WEB-INF/*
+wirebox/*
+testbox/*
+tests/results/
+.project
+settings.xml
+.settings/org.eclipse.core.resources.prefs
+# Intellij IDEA files
+*.iml
+*.ipr
+*.idea
+run-tests.sh
