@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.p-10p {
+ padding: 10px;
+}
+.headerbox {
+ background-image: url('/includes/images/bg-header.png');
+}

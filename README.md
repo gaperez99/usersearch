@@ -1,22 +1,33 @@
-# FuseBox configuration for a React application
+# Simple Template
 
-This is a very basic React application project similar to the one created by `create-react-app` using [FuseBox](https://fuse-box.org) as its building system. The project is described in the article [Introducing FuseBox, an alternative to Webpack](https://auth0.com/blog/introducing-fusebox-an-alternative-to-webpack/).
+A simple ColdBox MVC template
 
-Before building the application, run the following command in the root folder:
+## License
+Apache License, Version 2.0.
 
-```shell
-npm install
+## Important Links
+
+Source Code
+- https://github.com/coldbox-templates/simple
+
+## Quick Installation
+
+Each application templates contains a `box.json` so it can leverage [CommandBox](http://www.ortussolutions.com/products/commandbox) for its dependencies.  
+Just go into each template directory and type:
+
+```
+box install
 ```
 
-In order to build the development code of the application and start the integrated web server, run the following command:
+This will setup all the needed dependencies for each application template.  You can then type:
 
-```shell
-npm start
+```
+box server start
 ```
 
-In order to build the production ready code, run the following command:
+And run the application.
 
-```shell
-npm run dist
-```
-
+---
+ 
+###THE DAILY BREAD
+ > "I am the way, and the truth, and the life; no one comes to the Father, but by me (JESUS)" Jn 14:1-12

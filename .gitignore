@@ -1,3 +1,20 @@
-/node_modules
-/.fusebox
-/dist
+# General Ignores + IDE
+.DS_Store
+settings.xml
+WEB-INF
+.env
+
+# logs + tests
+logs/**
+tests/results/**
+
+# npm
+**/node_modules/*
+npm-debug.log
+yarn-error.log
+
+## Ignored Dependencies
+coldbox/*
+testbox/*
+modules/*
+modules/**/apidocs/**
