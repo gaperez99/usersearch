@@ -1,6 +1,6 @@
 USE [TestDB]
 GO
-/****** Object:  StoredProcedure [dbo].[getSearchResults]    Script Date: 10/25/2021 9:15:06 AM ******/
+/****** Object:  StoredProcedure [dbo].[getSearchResults]    Script Date: 10/25/2021 5:46:59 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10,11 +10,12 @@ GO
 -- Create date: 10/25/2021
 -- Description:	Returns users based on search criteria
 -- =============================================
-ALTER PROCEDURE [dbo].[getSearchResults]
+CREATE PROCEDURE [dbo].[getSearchResults]
 	-- Add the parameters for the stored procedure here
 	@firstName nvarchar(100) = NULL,
 	@lastName nvarchar(100) = NULL,
-	@party nvarchar(2) = NULL
+	@party nvarchar(2) = NULL,
+	@filter nvarchar(2) = NULL
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -60,6 +61,18 @@ BEGIN
 	 ELSE
 	 BEGIN
 	    SET @SQLQuery = @SQLQuery + '  AND  party = ''' +@party + ''''
+	 END
+	END
+	IF @filter <> ''
+	BEGIN
+	 IF @whereSet = 0
+	 BEGIN
+        SET @SQLQuery = @SQLQuery + ' WHERE legState = ''' +@filter + ''''
+		SET @whereSet = 1
+	 END
+	 ELSE
+	 BEGIN
+	    SET @SQLQuery = @SQLQuery + '  AND  legState = ''' +@filter + ''''
 	 END
 	END
 	EXEC sp_Executesql     @SQLQuery
