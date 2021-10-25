@@ -1,8 +1,9 @@
 ﻿<cfoutput>
-	<div class="bg-primary p-4 headerbox">
+	<div class="bg-primary pt-5 pb-5 headerbox">
 		<h1 class="text-light">Legislative Members Search</h1>
 	</div>
 <form class="container bg-light">
+		<div class="infobox">Enter in a first name, or last name, or you can just select a party. Partial first and last names will return all matching members.</div>
 		<div class="row p-2">
 			<div class="col-lg-4 col-md-4 col-sm-12">
    <div class="form-group">
@@ -29,8 +30,8 @@
 </div>
 </div>
   <div class="row p-2">
-			<div class="col-sm-12">
-  <button type="button" class="btn btn-primary submitSearch">Submit</button>
+			<div class="col-lg-3 offset-lg-9 col-md-6 offset-md-6 col-sm-12">
+  <button type="button" class="btn btn-primary submitSearch form-control">Submit</button>
 	</div>
 			</div>
 	</form>
