@@ -48,6 +48,7 @@
 	$(document).ready( function () {
     $(".submitSearch").on("click", function(event){
     event.preventDefault();
+    $('##showResults').addClass('loading-overlay');
     $.ajax({
      url: "main.getresults",
      type: "POST",
@@ -60,7 +61,8 @@
     })
     .done(function(data){
      $('##showResults').html(data);
-      $('##resultsDisplay').DataTable();
+     $('##resultsDisplay').DataTable();
+     $('##showResults').removeClass('loading-overlay');
     })
    });
 });
