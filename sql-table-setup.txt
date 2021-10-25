@@ -1,0 +1,35 @@
+USE [TestDB]
+GO
+
+/****** Object:  Table [dbo].[GovtMembers]    Script Date: 10/25/2021 2:53:07 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GovtMembers](
+	[memberID] [int] IDENTITY(1,1) NOT NULL,
+	[title] [nvarchar](50) NULL,
+	[firstName] [nvarchar](100) NULL,
+	[lastName] [nvarchar](100) NULL,
+	[chamber] [nvarchar](2) NULL,
+	[party] [nvarchar](2) NULL,
+	[legState] [nvarchar](2) NULL,
+	[district] [nvarchar](3) NULL,
+ CONSTRAINT [PK_GovtMembers] PRIMARY KEY CLUSTERED 
+(
+	[memberID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [TestDB]
+GO
+
+/****** Object:  Index [PK_GovtMembers]    Script Date: 10/25/2021 2:53:49 PM ******/
+ALTER TABLE [dbo].[GovtMembers] ADD  CONSTRAINT [PK_GovtMembers] PRIMARY KEY CLUSTERED 
+(
+	[memberID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
