@@ -63,9 +63,45 @@
      $('##showResults').html(data);
      $('##resultsDisplay').DataTable();
      $('##showResults').removeClass('loading-overlay');
+     setResultActions();
     })
    });
-});
-
+	});
+	function setResultActions(){
+		// add filter option
+  $(".submitFilter").on("click", function(event){
+   event.preventDefault();
+   $('##showResults').addClass('loading-overlay');
+   $.ajax({
+    url: "main.getresults",
+    type: "POST",
+    dataType: "html",
+    data: $('##filterForm :input, ##filterForm select').serialize()
+   })
+   .done(function(data){
+    $('##showResults').html(data);
+    $('##resultsDisplay').DataTable();
+    $('##showResults').removeClass('loading-overlay');
+    setResultActions();
+   })
+  });
+  //remove filter
+  $(".filterRemove").on("click", function(event){
+   event.preventDefault();
+   $('##showResults').addClass('loading-overlay');
+   $.ajax({
+    url: "main.getresults",
+    type: "POST",
+    dataType: "html",
+    data: $('##filterFormRemove :input, ##filterFormRemove select').serialize()
+   })
+   .done(function(data){
+    $('##showResults').html(data);
+    $('##resultsDisplay').DataTable();
+    $('##showResults').removeClass('loading-overlay');
+    setResultActions();
+   })
+  });
+	};
 </script>
 	</cfoutput>
