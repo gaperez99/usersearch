@@ -23,6 +23,7 @@
 					<option value="">Any Party</option>
 					<option value="D">Democratic Party</option>
 					<option value="R">Republican Party</option>
+					<option value="I">Independent</option>
 			</select>
 	</div>
 </div>

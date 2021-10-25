@@ -20,8 +20,8 @@
                 <td>#args.data.title[i]#</td>
                 <td>#args.data.firstName[i]#</td>
                 <td>#args.data.lastname[i]#</td>
-                <td>#args.data.chamber[i]#</td>
-                <td>#args.data.party[i]#</td>
+                <td>#args.chambers[args.data.chamber[i]]#</td>
+                <td>#args.parties[args.data.party[i]]#</td>
                 <td>#args.data.legState[i]#</td>
                 <td>#args.data.district[i]#</td>
             </tr>

@@ -8,6 +8,15 @@ component accessors="true" {
     var resultsData = {
      'data' = {},
      'records' = 0,
+     'chambers' = {
+      'H' = "House",
+      'S' = "Senate"
+     },
+     'parties' = {
+      'D' = "Democrat",
+      'R' = "Republican",
+      'I' = "Independent"
+     },
      'svrStatus' = "-1",
      'svrMessage' = "You must enter in a first name, last name, or select a party"
     };
